@@ -3,6 +3,7 @@ var concat = require('gulp-concat');
 var babel = require('gulp-babel');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
+var browserify = require('gulp-browserify');
 
 gulp.task('compile-app', function() {
   return gulp.src("./src/app/**/*.es")
@@ -10,8 +11,12 @@ gulp.task('compile-app', function() {
     .pipe(babel({
       presets: ['es2015']
     }))
-    .pipe(uglify())
     .pipe(concat("app.js"))
+    .pipe(browserify({
+      insertGlobals: true,
+      debug: !gulp.env.production
+    }))
+    .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest("./build"));
 });
