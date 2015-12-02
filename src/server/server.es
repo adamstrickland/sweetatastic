@@ -9,6 +9,8 @@ app.use('/', express.static(path.join(__dirname, '../public')));
 
 app.get('/', (req, res) => { res.redirect('/index.html'); });
 
-app.listen(app.get('port'), () => { console.log(`Server Started!!: http://localhost:${app.get("port")}/`); });
+app.get('/app.js', (req, res) => { res.sendFile(path.join(__dirname, '../build/app.js')); });
+
+app.listen(app.get('port'), () => { console.log(`Server Started!!!: http://localhost:${app.get("port")}/`); });
 
 export default app;
