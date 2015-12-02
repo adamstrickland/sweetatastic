@@ -1,0 +1,40 @@
+{
+  "name": "sweetatastic",
+  "version": "0.0.1",
+  "description": "Sweetatastic Sweets are Sweet!",
+  "main": "server.js",
+  "dependencies": {
+    "babel": "^6.2.1",
+    "babel-preset-2015": "6.1.18",
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.2.0"
+  },
+  "scripts": {
+    "compile": "babel src/ --out-dir lib/ --source-maps",
+    "watch": "babel src/ --out-dir lib/ --source-maps --watch",
+    "prepublish": "npm run compile",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactjs/react-tutorial.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "contributors": [
+    { "name": "Adam Strickland" },
+    { "name": "Annika Strickland" }
+  ],
+  "bugs": {
+    "url": "https://github.com/adamstrickland/sweetatastic/issues"
+  },
+  "homepage": "https://github.com/adamstrickland/sweetatastic",
+  "engines": {
+    "node": "0.12.x"
+  }
+}
