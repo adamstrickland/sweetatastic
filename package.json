@@ -19,11 +19,12 @@
     "gulp-concat": "^2.6.0",
     "gulp-jest": "^0.4.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.1"
+    "gulp-uglify": "^1.5.1",
+    "jest-cli": "^0.8.0"
   },
   "scripts": {
     "watch": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node dist/server.js"
   },
   "repository": {
